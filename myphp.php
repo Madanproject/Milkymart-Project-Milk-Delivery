@@ -1,5 +1,6 @@
 <?php
 require_once"dbconfig.php";
+require_once"validation.php";
 ##################################################
 if(isset($_REQUEST['signup']))
 {
@@ -282,15 +283,15 @@ $tmp_name=$_FILES["image"]["tmp_name"];
 if(@$_REQUEST['delete']=='yes')
 {
 $bookid=$_REQUEST['id'];
-$n=iud("DELETE FROM `books` WHERE bookid='$bookid'");
+$n=iud("DELETE FROM `items` WHERE itemid='$bookid'");
 if($n==1)
 {
-	header("location:view_book_list.php");
+	header("location:view_item_list.php");
 }
 else
 {
 	echo"<script>alert('Something Wrong');
-		 window.location='view_book_list.php';
+		 window.location='view_item_list.php';
 		 </script>";
 }
 }	
@@ -299,7 +300,7 @@ else
 	if(@$_REQUEST['edit']=='yes')
 {
 	$bookid=$_REQUEST['id'];
-	header("location:edit_book.php?id=$bookid");
+	header("location:edit_.php?id=$bookid");
 }
 ###################################################	
 if(isset($_REQUEST['Update_book']))
@@ -336,25 +337,25 @@ echo $query="UPDATE `books` SET `isbn`='$uisbn',`Title`='$utitle',`Author`='$uau
 }
 	#####################################################################
 	####################################################################
-if(@$_REQUEST['dele']=='yes')
+if(@$_REQUEST['delete_enquiry']=='yes')
 {
 $id=$_REQUEST['id'];
 
 		 
-$n=iud("DELETE FROM `cart` WHERE cartid='$id'");
+$n=iud("DELETE FROM `download_enquiry` WHERE cus_id='$id'");
 if($n==1)
 {
 	echo"<script>
 	
 	alert('Successful');
-		 window.location='mycart.php';
+		 window.location='enquiry.php';
 		 </script>";
 }
 		 
 else
 {
 	echo"<script>alert('Something Wrong');
-		 window.location='mycart.php';
+		 window.location='enquiry.php';
 		 </script>";
 }
 }	

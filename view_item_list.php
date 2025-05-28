@@ -104,7 +104,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 <div class="sub-heard-part">
 <ol class="breadcrumb m-b-0">
 <li><a href="index.html">Home</a></li>
-<li class="active">My Grocery</li>
+<li class="active">My Products</li>
 </ol>
 </div>
 <div class="graph-visual tables-main">
@@ -112,7 +112,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 <div class="graph">
 <div class="block-page">
 <p>
-<h3 class="inner-tittle two">Grocery List</h3>
+<h3 class="inner-tittle two">Products List</h3>
 <a href="additem.php"> <button class="btn btn-pill btn-primary">Add New Items </button></a>
 <div class="form-body">
 <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
